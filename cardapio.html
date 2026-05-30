@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="estilo/cardapio.css">
+</head>
+<body>
+
+    <div class="caixa-cardapio">
+        
+        <header class="topo-cardapio">
+            <div class="logo-loja">
+                <h1>Raízes do Nordeste</h1>
+            </div>
+            
+            <nav class="menu-navegacao">
+                <a href="index.html">Login</a>
+                <a href="#" class="active">Pratos</a>
+                <a href="fidelidade.html">Fidelidade</a>
+                <a href="pagamento.html">Pagamento</a>
+            </nav>
+
+            <!--Selecionar a unidade, o local da compra-->
+            <div class="selecao-unidade">
+                <select name="unidade" id="unidade">
+                    <option value="">Selecione a unidade</option>
+                    <option value="centro">Unidade Centro</option>
+                    <option value="shopping">Unidade Shopping</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="especial-dia">
+            <div class="banner-conteudo">
+                <h2>Raízes do Nordeste</h2>
+                <p>Especial do Dia </p>
+                <p>Sabores nordestinos com um toque caseiro e único!</p>
+            </div>
+        </div>
+
+        <!--Alguns pratos do cardapio, produtos ficticios-->
+        <main class="conteudo-cardapio">
+            <h3 class="titulo-secao">Nossos Pratos</h3>
+            
+            <div class="lista-produtos">
+                <div class="item-prato">
+                    <div class="foto-produto"></div>
+                    <div class="info-prato">
+                        <span class="nome-prato">Baião de Dois Especial</span>
+                        <span class="preco-prato">R$ 28,90</span>
+                    </div>
+                    <button class="adicionar">+</button>
+                </div>
+
+                <div class="item-prato">
+                    <div class="foto-produto"></div>
+                    <div class="info-prato">
+                        <span class="nome-prato">Carne de Sol com Macaxeira</span>
+                        <span class="preco-prato">R$ 34,90</span>
+                    </div>
+                    <button class="adicionar">+</button>
+                </div>
+
+                <div class="item-prato">
+                    <div class="foto-produto"></div>
+                    <div class="info-prato">
+                        <span class="nome-prato">Escondidinho de Frango</span>
+                        <span class="preco-prato">R$ 26,00</span>
+                    </div>
+                    <button class="adicionar">+</button>
+                </div>
+            </div>
+        </main>
+
+        <!--Sacolinha de compra, mostra o valor total dos pratos escolhidos, para a pessoa saber qual o valor da compra-->
+    <section class="barra-total">
+        <div class="infos-sacola">
+            <span class="texto-total">Sua sacola</span>
+            <span class="valor-total">R$ 0,00</span>
+        </div>
+        <div id="itens-na-sacola"></div>
+        
+        <a href="pagamento.html" class="pagamento">
+            Ir para o Pagamento
+        </a>
+    </section>
+
+    <script src="java.script/cardapio.js"></script>
+
+</body>
+</html>

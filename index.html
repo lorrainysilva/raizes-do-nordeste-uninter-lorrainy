@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+
+    <div class="caixa-login">
+        <div class="nome-loja">
+            <h2>Raízes do Nordeste</h2>
+        </div>
+        <div>
+            <h1 class="login">Login</h1>
+        </div>
+
+<!--Pedir as informações do cliente para fazer o login- nome e o cpf-->
+        <form action="./cardapio.html" method="GET">
+            <div class="informacoes">
+                <input 
+                    type="text" 
+                    id="nome" 
+                    name="nome" 
+                    placeholder="Nome Completo" 
+                    required
+                >
+            </div>
+            <div class="informacoes">
+                <input 
+                    type="text" 
+                    id="cpf" 
+                    name="cpf" 
+                    placeholder="CPF (apenas números)" 
+                    maxlength="11" 
+                    inputmode="numeric" 
+                    required
+                >
+            </div>
+
+<!--Caixinha com o termo para pegar o consentimento do cliente-->
+            <div class="consentimento">
+                <label class="lgpd">
+                    <input type="checkbox" name="lgpd" required>
+                    <span>
+                        Li e aceito os termos de uso e a 
+                        <a href="politica-de-privacidade.html">Política de Privacidade</a> 
+                        para o tratamento dos meus dados conforme a LGPD.
+                    </span>
+                </label>
+            </div>
+
+            <button type="submit" class="entrar">Entrar</button>
+        </form>        
+    </div>
+</body>
+</html>

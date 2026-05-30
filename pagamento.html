@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="estilo/pagamento.css">
+</head>
+<body>
+
+    <div class="caixa-pagamento-pagina">
+        
+        <header class="topo-pagamento">
+            <div class="logo-loja">
+                <h1>Raízes do Nordeste</h1>
+            </div>
+        </header>
+
+        <main class="conteudo-pagamento">
+            <h2 class="titulo-pagamento">Finalizar Pagamento</h2>
+            <!--caixinha que mostra os podutos selecionados para compra-->
+            <div class="caixa-card-pagamento">
+                <form>
+                    <div class="campo-pagamento">
+                        <div class="campo-pagamento">
+                            <label>Itens Escolhidos:</label>
+                            <div id="lista-itens-pagamento">
+                                <p style="color: #888; font-style: italic;">Nenhum item selecionado</p>
+                            </div>
+                        </div>
+                       
+                        <div class="campo-pagamento">
+                            <label for="total">Total a Pagar:</label>
+                            <div class="input-total">
+                                <span>R$</span>
+                                <span id="valor-total-exibido">0,00</span>
+                            </div>
+                        </div>
+<!--Campo de pagamento, onde o cliente pode escolher a forma que vai pagar-->
+                    <div class="campo-pagamento">
+                        <label for="forma-pagamento">Forma de Pagamento:</label>
+                        <select name="forma-pagamento" id="forma-pagamento">
+                            <option value="pix">Pix</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="dinheiro">Dinheiro</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="botao-confirmar-pagamento">Confirmar e Pagar</button>
+
+                    <div class="link-voltar-container">
+                        <a href="cardapio.html" class="link-voltar">Voltar</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+    </div>
+    <script src="java.script/pagamento.js"></script>
+</body>
+</html>

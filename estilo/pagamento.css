@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #203e2f;
+}
+/*Adicionado o reset de box-sizing específico para esta página*/
+.caixa-pagamento-pagina,
+.caixa-pagamento-pagina *,
+.caixa-pagamento-pagina *::before,
+.caixa-pagamento-pagina *::after {
+    box-sizing: border-box;
+}
+.caixa-pagamento-pagina {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #203e2f;
+}
+
+/*Faixa superior da logo */
+.topo-pagamento {
+    background-color: #4d6851;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.conteudo-pagamento {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /*evita que o card estique demais no desktop*/
+    margin: 0 auto;
+}
+.titulo-pagamento {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    align-self: flex-start; 
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+.caixa-card-pagamento {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 30px 24px;
+    border-radius: 20px;
+}
+/*Estruturação dos campos de pagamento*/
+.campo-pagamento {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    width: 100%;
+}
+.campo-pagamento label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+}
+/*exibir o preço final da compra*/
+.input-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 16px; 
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+/*Selecionar a forma de pagamento para continuar o processo*/
+.campo-pagamento select {
+    width: 100%;
+    padding: 14px 16px;
+    padding-right: 40px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #000000;
+    outline: none;
+    cursor: pointer;
+/*Ajustando para a versão mobile se adaptar*/
+    -webkit-appearance: listbox; /* Garante cantos arredondados perfeitos*/
+    appearance: auto;
+}
+.campo-pagamento select:focus {
+    border-color: #8a2a42;
+    box-shadow: 0 0 0 3px #d354001a;
+}
+/*Botão confirmar*/
+.botao-confirmar-pagamento {
+    width: 100%;
+    background-color: #8a2a42;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.botao-confirmar-pagamento:hover {
+    background-color: #d37990;
+    color: #000000;
+}
+
+/*Link voltar*/
+.link-voltar-container {
+    text-align: center;
+    margin-top: 25px;
+    padding-bottom: 5px;
+}
+.link-voltar {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+.link-voltar:hover {
+    color: #8a2a42; 
+}

@@ -1,0 +1,151 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #203e2f;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* No computador impede rolagem, no celular vai permitir se a tela for muito pequena */
+@media (min-height: 600px) {
+    body {
+        overflow: hidden;
+    }
+}
+
+.topo-pagamento {
+    background-color: #4d6851;
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+}
+.topo-pagamento h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/*caixa da fidelidade, onde vai aparecer os pontos adquiridos, pedido pela empresa, acumular pontos */
+.cartao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; 
+    min-height: calc(100vh - 70px);
+    margin: 0 auto;
+}
+.cartao-fundo{ 
+    background-color: #ffffff;
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef0f2;
+    text-align: center;
+}
+.titulo-ponto {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+/*O cartão principal,com os pontos e a regra*/
+.cartao-fidelidade {
+    background: linear-gradient(135deg, #02763c, #203e2f)/*Vai criar um degradê, essa parte é por pura estetica*/;
+    color: #ffffff;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 16px;
+    margin-bottom: 25px; 
+    text-align: left;
+}
+.recompensa{
+    padding: 15px 0;
+    font-size: 0.95rem;
+}
+.topo-cartao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.topo-cartao h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.status-pontos {
+    background-color: #ffffff33;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/*Grade de carimbos 5 numeros por linha */
+.carimbos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px 8px;
+    justify-items: center;
+    margin-top: 10px;
+}
+.carimbo {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff1f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+.carimbo.carimbado {
+    background-color: #ffffff;
+    border-style: solid;
+    color: #06924c;
+}
+
+.voltar .cardapio {
+    display: block;
+    width: 100%;
+    background-color: #8a2a42; 
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px #00000026;
+}
+.voltar .cardapio:hover {
+    color:#000000;
+}
+
+@media (max-width: 480px) {
+    .cartao {
+        padding: 10px;
+    }
+    .cartao-fundo {
+        padding: 20px 15px;
+    }
+    .cartao-fidelidade {
+        padding: 20px 15px;
+    }
+    .carimbo {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    .topo-cartao h3 {
+        font-size: 1rem;
+    }
+}
