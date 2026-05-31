@@ -38,10 +38,18 @@ window.onload = function() {
                 alert("Ops! Seu carrinho está vazio. Adicione um prato antes de pagar.");
                 return;
             }
+            
             var granaGasta = parseFloat(vSalvo);
             var modalidade = pagamento ? pagamento.options[pagamento.selectedIndex].text : "Não informada";
-            var novosPontos = Math.floor(granaGasta / 10);
             
+            alert("Conectando ao serviço de pagamento externo... Por favor, aguarde.");
+
+            if (modalidade.toLowerCase().includes("dinheiro")) {
+                alert("Erro de comunicação: O sistema de pagamento externo está indisponível.");
+                alert("Sua tentativa foi registrada. Por favor, tente outra modalidade ou dirija-se ao balcão.");
+                return;
+            }
+            var novosPontos = Math.floor(granaGasta / 10);
             var textoAlerta = "Pedido enviado com sucesso!\n\nForma de pagamento: " + modalidade + "\nTotal: R$ " + vSalvo.replace(".", ",") + "\n";
 
             if (novosPontos > 0) {
@@ -55,7 +63,9 @@ window.onload = function() {
                 }
                 localStorage.setItem("pontosFidelidade", pontosAtuais);
             }
+            
             alert(textoAlerta);
+            
             localStorage.removeItem("valorDoPedido");
             localStorage.removeItem("itensDoPedido");
             
